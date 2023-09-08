@@ -1,3 +1,6 @@
+// ----------------------------
+// -author: W.A
+
 `define RD 1ns
 
 module loop_arb #(
