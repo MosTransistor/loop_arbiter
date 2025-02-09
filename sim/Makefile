@@ -1,9 +1,10 @@
 sim:
+	echo $$RANDOM > random.txt
 	iverilog -g2012 -o sim.o  ./tb_arb.sv ../src/loop_arb.v
 	vvp sim.o
 
 wave:
-	gtkwave *.vcd
+	gtkwave *.vcd &
 
 clean:
-	rm -rf *.o *.vcd
+	rm -rf *.o *.vcd random.txt
